@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-breakout-game</title>
+    <!-- icons bootsrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600&family=Rubik+Pixels&family=Sedgwick+Ave+Display&family=Signika&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="learnScreen" class="learnScreen">
+      <h2>INSTRUCTIONS</h2>
+      <ul>
+        <li>max lives of the player are three lives</li>
+        <li>max levels of the game are three levels</li>
+      </ul>
+      <h2>HOW TO PLAY</h2>
+      <div class="containerLearn">
+        <div class="col">
+          <video
+            src="video/move paddle.mp4"
+            muted
+            autoplay
+            height="300"
+            loop
+          ></video>
+          <ul>
+            <li>to move the paddle to right press on right arrow</li>
+            <li>to move the paddle to left press on left arrow</li>
+          </ul>
+        </div>
+        <div class="col">
+          <video
+            src="video/brick two hits.mp4"
+            muted
+            autoplay
+            height="300"
+            loop
+          ></video>
+          <ul>
+            <li>you need hit the brick twic to broke the brick</li>
+          </ul>
+        </div>
+        <div class="col">
+          <video
+            src="video/unbreakable brick.mp4"
+            muted
+            autoplay
+            height="300"
+            loop
+          ></video>
+          <ul>
+            <li>the white bricks are unbreakable</li>
+          </ul>
+        </div>
+      </div>
+      <button id="backToHome" class="backToHome">
+        <i class="bi bi-arrow-return-left"></i>
+        <p>back home</p>
+      </button>
+      <button id="comeOn" class="comeOn">
+        <i class="bi bi-arrow-return-right"></i>
+        <p>let's play</p>
+      </button>
+    </div>
+    <div id="startScreen" class="startScreen">
+      <button id="play" class="play">
+        <i class="bi bi-controller"></i>
+        <p>play</p>
+      </button>
+      <button id="learn" class="learn">
+        <i class="bi bi-play-circle"></i>
+        <p>learn</p>
+      </button>
+    </div>
+    <!-- SOUND IMAGE -->
+    <div class="sound">
+      <img src="img/SOUND_ON.png" alt="" id="sound" />
+    </div>
+
+    <!-- PAUSE ICON -->
+    <div class="pause" id="pauseBtn">
+      <i class="bi bi-pause-circle-fill"></i>
+    </div>
+
+    <!-- EXIT ICON -->
+    <div class="exit" id="exitBtn">
+      <!-- <i class="bi bi-box-arrow-left"></i> -->
+      <img src="img/10131944_door_exit_line_icon.png" alt="" />
+    </div>
+
+    <!-- CONVAS ELEMENT -->
+    <canvas id="myCanvas" width="600" height="650"> </canvas>
+
+    <!-- GAME OVER & WIN ELEMENT -->
+    <div id="gameStatus" style="top: 0">
+      <h2 id="wonGame">You Have Won</h2>
+      <img src="img/cup.png" id="cup-img" />
+      <h2 id="loseGame">GAME OVER</h2>
+      <img src="img/sad.png" id="sad-img" />
+      <div id="playAgain">Play Again..!</div>
+    </div>
+    <script src="js/breakout.js"></script>
+    <script src="js/components.js"></script>
+  </body>
+</html>
